@@ -61,7 +61,7 @@ def clear_LEDs():
     pixels.fill((0, 0, 0))
     pixels.show()
 
-##clear_LEDs()
+clear_LEDs()
 print("Welcome\n")
 
 while len(userIn) != -1 :
@@ -80,6 +80,8 @@ while len(userIn) != -1 :
         nofinputs = 0
         
     elif userIn == shutoff:
+        print("Clearing LEDs")
+        clear_LEDs()
         os.system("sudo shutdown -h now")
         
 #     if userIn == "exit":
