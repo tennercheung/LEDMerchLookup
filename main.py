@@ -9,7 +9,7 @@ import neopixel
 pixel_pin = board.D18
 
 # The number of NeoPixels
-num_pixels = 8
+num_pixels = 300
 
 # The order of the pixel colors - RGB or7 GRB. Some NeoPixels have red and green reversed!
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
@@ -43,8 +43,9 @@ def check_input(userIn):
             for j in range (0, len(array[i]) ): #x
                 if (item == array[i][j]):
                     print("Found: "+str(item)+ " at slot "+ledArray[i][j]+" of column "+str(j))
-                    ##pixels[(ledArray[i][j])] = (255, 0, 0) #turn respective LED red
-                    ##pixels.show() 
+                    pixels[int(ledArray[i][j])] = (255, 0, 0) #turn respective LED red
+                    #pixels[149]=(255,0,0)
+                    pixels.show()
                     itemsFound+=1
                 
     return itemsFound
@@ -58,7 +59,7 @@ def clear_LEDs():
     pixels.fill((0, 0, 0))
     pixels.show()
 
-clear_LEDs()
+##clear_LEDs()
 print("Welcome\n")
 
 while len(userIn) != -1 :
@@ -85,35 +86,4 @@ while len(userIn) != -1 :
 
 #     overRide == False
     
-# def rainbow_cycle(wait):
-#     for j in range(255):
-#         for i in range(num_pixels):
-#             pixel_index = (i * 256 // num_pixels) + j
-#             pixels[i] = wheel(pixel_index & 255)
-#         pixels.show()
-#         time.sleep(wait)
-
-# while True:
-#     # Comment this line out if you have RGBW/GRBW NeoPixels
-#     pixels.fill((255, 0, 0))
-#     # Uncomment this line if you have RGBW/GRBW NeoPixels
-#     # pixels.fill((255, 0, 0, 0))
-#     pixels.show()
-#     time.sleep(1)
-
-#     # Comment this line out if you have RGBW/GRBW NeoPixels
-#     pixels.fill((0, 255, 0))
-#     # Uncomment this line if you have RGBW/GRBW NeoPixels
-#     # pixels.fill((0, 255, 0, 0))
-#     pixels.show()
-#     time.sleep(1)
-
-#     # Comment this line out if you have RGBW/GRBW NeoPixels
-#     pixels.fill((0, 0, 255))
-#     # Uncomment this line if you have RGBW/GRBW NeoPixels
-#     # pixels.fill((0, 0, 255, 0))
-#     pixels.show()
-#     time.sleep(1)
-
-#     rainbow_cycle(0.001)    # rainbow cycle with 1ms delay per step
 
