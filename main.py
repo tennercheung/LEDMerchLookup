@@ -5,11 +5,12 @@ import csv
 import board
 import neopixel
 
+import os
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
 pixel_pin = board.D18
 
 # The number of NeoPixels
-num_pixels = 300
+num_pixels = 600
 
 # The order of the pixel colors - RGB or7 GRB. Some NeoPixels have red and green reversed!
 # For RGBW NeoPixels, simply change the ORDER to RGBW or GRBW.
@@ -20,6 +21,7 @@ pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=Fal
 
 userIn = []
 override = ['exit']
+shutoff = ['off']
 
 findCounter = 0
 nofinputs = 0
@@ -66,7 +68,7 @@ while len(userIn) != -1 :
     
     userIn = parse_input()
     
-    if userIn != override:
+    if (userIn != override and userIn != shutoff):
         nofinputs+= len(userIn)
         findCounter+= check_input(userIn) 
         print(str(findCounter)+" of " +str(nofinputs)+" items found\n")
@@ -76,6 +78,9 @@ while len(userIn) != -1 :
         clear_LEDs()
         findCounter = 0
         nofinputs = 0
+        
+    elif userIn == shutoff:
+        os.system("sudo shutdown -h now")
         
 #     if userIn == "exit":
 #         clear_LEDs()
