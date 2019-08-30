@@ -22,6 +22,7 @@ pixels = neopixel.NeoPixel(pixel_pin, num_pixels, brightness=0.2, auto_write=Fal
 userIn = []
 override = ['exit']
 shutoff = ['off']
+reboot = ['restart']
 
 findCounter = 0
 nofinputs = 0
@@ -68,7 +69,7 @@ while len(userIn) != -1 :
     
     userIn = parse_input()
     
-    if (userIn != override and userIn != shutoff):
+    if (userIn != override and userIn != shutoff and userIn != reboot):
         nofinputs+= len(userIn)
         findCounter+= check_input(userIn) 
         print(str(findCounter)+" of " +str(nofinputs)+" items found\n")
@@ -83,6 +84,11 @@ while len(userIn) != -1 :
         print("Clearing LEDs")
         clear_LEDs()
         os.system("sudo shutdown -h now")
+
+    elif userIn == reboot:
+        print("Clearing LEDs")
+        clear_LEDs()
+        os.system("sudo reboot")
         
 #     if userIn == "exit":
 #         clear_LEDs()
