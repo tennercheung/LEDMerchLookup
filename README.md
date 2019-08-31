@@ -13,6 +13,7 @@
 10. Micro USB cable
 11. 18-20 AWG Wire
 12. 220-470 Ohm 0.25W+ resistor 
+13. VNC Viewer app or HDMI screen+Keyboard
 
 ## Software 
 
