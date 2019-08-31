@@ -89,8 +89,9 @@ while len(userIn) != -1 :
         print("Clearing LEDs")
         clear_LEDs()
         print("Updating..")
-        os.system("sudo python3 boot.py")
-        
+        os.system("git pull;sudo python3 main.py")
+
+
 #     if userIn == "exit":
 #         clear_LEDs()
 #         overRide == True
