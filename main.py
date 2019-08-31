@@ -88,7 +88,8 @@ while len(userIn) != -1 :
     elif userIn == reboot:
         print("Clearing LEDs")
         clear_LEDs()
-        os.system("sudo reboot")
+        print("Updating..")
+        os.system("sudo python3 boot.py")
         
 #     if userIn == "exit":
 #         clear_LEDs()
