@@ -36,7 +36,7 @@ def check_input(userIn):
         csv_reader = csv.reader(csv_file, delimiter=',')
         for initrow in csv_reader: 
             array.append(initrow)
-    with open('led.csv') as csv_file:
+    with open('LED.csv') as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
         for initrow in csv_reader: 
             ledArray.append(initrow)
