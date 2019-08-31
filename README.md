@@ -29,3 +29,11 @@
 * Capacitor goes parallel with the PSU, Micro USB cable and the RGB LEDs' power lines
 * GND (third pin from the top row) connects to the ground of the parallel connections
 * Resistor goes between GPIO8 (sixth pin from the top row) and the RGB LEDs' DATAIN cable
+
+## Help/notes
+
+* Program crashed? ***sudo python3 main.py***
+* Need to plug in the RGB LEDs? First connect GND, Positive, then DataIN (do in reverse order for unplugging)
+* Clear the LEDs? ***exit***
+* Restart after an update? ***restart***
+* Turn off the Pi? ***off***
