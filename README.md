@@ -40,7 +40,8 @@
 ## Help/notes
 
 * Program crashed? ***sudo python3 main.py***
-* Need to plug in the RGB LEDs? First connect GND, Positive, then DataIN (do in reverse order for unplugging)
 * Clear the LEDs? ***exit***
 * Restart after an update? ***restart***
 * Turn off the Pi? ***off***
+
+* Need to plug in the RGB LEDs? First connect GND, Positive, then DataIN (do in reverse order for unplugging)
