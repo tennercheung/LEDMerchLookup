@@ -13,6 +13,7 @@
 10. Micro USB cable
 11. 18-20 AWG Wire
 12. 220-470 Ohm 0.25W+ resistor 
+13. VNC Viewer app or HDMI screen+Keyboard
 
 ## Software 
 
@@ -30,10 +31,17 @@
 * GND (third pin from the top row) connects to the ground of the parallel connections
 * Resistor goes between GPIO8 (sixth pin from the top row) and the RGB LEDs' DATAIN cable
 
+## Prototype V1
+*Video Demo* (https://youtu.be/zMPQjYHOZak)
+## Prototype V2
+[![Components](https://github.com/tennercheung/LEDMerchLookup/blob/master/www/components.jpg)]
+[![LEDs in use](https://github.com/tennercheung/LEDMerchLookup/blob/master/www/LEDs.jpg)]
+
 ## Help/notes
 
 * Program crashed? ***sudo python3 main.py***
-* Need to plug in the RGB LEDs? First connect GND, Positive, then DataIN (do in reverse order for unplugging)
 * Clear the LEDs? ***exit***
 * Restart after an update? ***restart***
 * Turn off the Pi? ***off***
+
+* Need to plug in the RGB LEDs? First connect GND, Positive, then DataIN (do in reverse order for unplugging)
