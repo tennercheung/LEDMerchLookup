@@ -45,7 +45,7 @@ def check_input(userIn):
         for i in range(0, len(array)): #y
             for j in range (0, len(array[i]) ): #x
                 if (item == array[i][j]):
-                    print( "Found: "+str(item)+ " @LED "+str( int(ledArray[i][j]) ) 
+                    print( "Found: "+str(item)+ " @LED "+str( int(ledArray[i][j]) ) )
                     pixels[(int(ledArray[i][j])-1)] = (255, 0, 0) #turn respective LED red
                     #pixels[149]=(255,0,0)
                     pixels.show()
