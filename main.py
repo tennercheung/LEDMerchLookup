@@ -23,6 +23,7 @@ userIn = []
 override = ['exit']
 shutoff = ['off']
 reboot = ['restart']
+reset = ['reset']
 
 findCounter = 0
 nofinputs = 0
@@ -90,6 +91,12 @@ while len(userIn) != -1 :
         clear_LEDs()
         print("Updating..")
         os.system("git pull;sudo python3 main.py")
+        
+    elif userIn == reset:
+        print("Clearing LEDs")
+        clear_LEDs()
+        print("Resetting..")
+        os.system("sudo reboot")
 
 
 #     if userIn == "exit":
