@@ -7,7 +7,7 @@ import neopixel
 
 import os
 # NeoPixels must be connected to D10, D12, D18 or D21 to work.
-pixel_pin = board.D18
+pixel_pin = board.D21
 
 # The number of NeoPixels
 num_pixels = 600
@@ -61,6 +61,7 @@ def parse_input():
     return userIn
 
 def clear_LEDs():
+    
     pixels.fill((0, 0, 0))
     pixels.show()
 
